@@ -31,7 +31,7 @@ An AngularJs directive, based on Google Feed JSON interface, to load and show fe
 <h5>isolatd scope data</h5>
   attr name   |     type        |   description    
 --------------| ----------------|-------------------------------------------------------------------
-query         | two-way binding | it can be  <br/>a) an array objects with this structure : {q:string value with a link of rss service,num:int to specify the number of loaded item} <br/>b) a string to perform a feed search by keywords
+query         | two-way binding | it can be  <br/>a) an array objects with this structure :<br> {<br><b>q</b>:string value with a link of rss service,<br/><b>num</b>:int to specify the number of loaded item<br/>} <br/>b) a string to perform a feed search by keywords
 reloadMs      | one-way binding | Milliseconds for reloading data from the server
 slideMs       | one-way binding | Milliseconds to activare a slider feeds service. Use "auto" to implement an auto calculation interval.
 feedData      | two-way binding | Set here your data source  for the response body
