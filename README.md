@@ -1,4 +1,4 @@
-# angular-instagram-tag-media
+# angular-google-feed-api
 An AngularJs directive, based on Google Feed JSON interface, to load and show feeds by using your custom layout.
 
 <br/>
