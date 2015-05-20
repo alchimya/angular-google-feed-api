@@ -26,6 +26,8 @@ An AngularJs directive, based on Google Feed JSON interface, to load and show fe
 
 
 ```
+<br/>
+![ScreenShot](https://raw.github.com/alchimya/angular-google-feed-api/master/screenshots/angular-google-feed-api.gif)
 
 # How to use
 <h5>isolatd scope data</h5>
@@ -54,9 +56,6 @@ var custom_data={
   currentIndex:_currentSlideIndex
 };
 ```
-
-<br/>
-![ScreenShot](https://raw.github.com/alchimya/angular-google-feed-api/master/screenshots/angular-google-feed-api.gif)
 
 Examples:
 - marquee
