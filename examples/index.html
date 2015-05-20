@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Test Http Get</title>
+    <link rel="stylesheet" type="text/css" href="css/site.css">
+</head>
+<body>
+
+
+
+    <div ng-controller="GoogleFeedApiController">
+        <h1>Last refresh: {{lastLoadDate}}</h1>
+        <span ng-show="isRequestInProgress">Loading...</span>
+
+
+
+
+        <h1>Slider of feeds</h1>
+        <ng-dv-google-feed-api
+                query="feedSources"
+                reload-ms="60000"
+                slide-ms="3000">
+
+            <div class="post-it">
+                <span>{{feedTitle}}</span>
+                <div>
+                    <span>{{pageOf}}</span>
+                </div>
+            </div>
+        </ng-dv-google-feed-api>
+
+        <h1>Marquee of feeds</h1>
+        <ng-dv-google-feed-api
+                query="feedSources"
+                reload-ms="180000">
+            <div class="marquee-feed" >
+                <marquee  behavior="scroll" direction="left" scrollamount="15" >
+                    {{textFeeds| uppercase}}
+                </marquee>
+            </div>
+        </ng-dv-google-feed-api>
+
+
+        <h1>Table of feeds</h1>
+
+        <ng-dv-google-feed-api
+                query="feedSources"
+                reload-ms="60000"
+                feed-data="feedsJSON">
+                <!--data presentation-->
+                <table>
+                    <thead>
+                    <tr>
+                        <th>title</th>
+                        <th>author</th>
+                        <th>date</th>
+                        <th>link</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="item in feedsJSON">
+                        <td>
+                            {{item.title}}
+                        </td>
+                        <td>
+                            {{item.author}}
+                        </td>
+                        <td>
+                            {{item.publishedDate}}
+                        </td>
+                        <td>
+                            <a href="{{item.link}}" target="_blank">{{item.link}}</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+        </ng-dv-google-feed-api>
+
+        <h1>Table of feeds with search string:{{searchFeed}}</h1>
+        <ng-dv-google-feed-api
+                query="searchFeed"
+                reload-ms="60000"
+                feed-data="feedsJSONSearch">
+            <!--data presentation-->
+            <table>
+                <thead>
+                <tr>
+                    <th>title</th>
+                    <th>rss url</th>
+                    <th>content snippet</th>
+                    <th>link</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="item in feedsJSONSearch">
+                    <td>
+                        {{item.title}}
+                    </td>
+                    <td>
+                        {{item.contentSnippet}}
+                    </td>
+                    <td>
+                        <a href="{{item.url}}" target="_blank">{{item.url}}</a>
+                    </td>
+                    <td>
+                        <a href="{{item.link}}" target="_blank">{{item.link}}</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+        </ng-dv-google-feed-api>
+
+
+    </div>
+
+
+
+
+    <script src="angular/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="controllers/GoogleFeedApiController.js"></script>
+    <script src="../source/angular-google-feed-api.js"></script>
+
+</body>
+</html>

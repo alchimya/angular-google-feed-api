@@ -1,0 +1,41 @@
+table, td, th {
+    border: 1px solid green;
+}
+
+th {
+    background-color: green;
+    color: white;
+}
+
+
+.marquee-feed{
+    opacity: 0.9;
+    background-color: #A9140D;
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 40pt;
+    color: white;
+
+}
+
+
+
+.post-it {
+    background:#fefabc;
+    padding:15px;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size:15px;
+    color: #000;
+    width:200px;
+    height: 100px;
+    -moz-transform: rotate(7deg);
+    -webkit-transform: rotate(7deg);
+    -o-transform: rotate(7deg);
+    -ms-transform: rotate(7deg);
+    transform: rotate(7deg);
+
+    box-shadow: 0px 4px 6px #333;
+    -moz-box-shadow: 0px 4px 6px #333;
+    -webkit-box-shadow: 0px 4px 6px #333;
+
+}
