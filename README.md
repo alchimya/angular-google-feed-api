@@ -2,6 +2,9 @@
 An AngularJs directive, based on Google Feed JSON interface, to load and show feeds by using your custom layout.
 
 <br/>
+![ScreenShot](https://raw.github.com/alchimya/angular-google-feed-api/master/screenshots/angular-google-feed-api.gif)
+
+<br/>
 
 ```javascript
 
@@ -26,8 +29,6 @@ An AngularJs directive, based on Google Feed JSON interface, to load and show fe
 
 
 ```
-<br/>
-![ScreenShot](https://raw.github.com/alchimya/angular-google-feed-api/master/screenshots/angular-google-feed-api.gif)
 
 # How to use
 <h5>isolatd scope data</h5>
